@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isArmstrong(n) {
+	let temp = n;
+	let o = order(temp)
+	let sum = 0;
+
+	while (temp) {
+		remainder = temp % 10;
+
+		temp = Math.floor(temp / 10);
+		sum = sum + Math.pow(remainder, o);
+	}
+	if (sum === n) {
+		console.log(n + " is an Armstrong Number");
+	}
+	else {
+		console.log(n + " is Not an Armstrong Number");
+	}
+}
+
+function order(n) {
+	let k = 0;
+	while (n > 0) {
+		k++;
+		n = Math.floor(n / 10);
+	}
+	return k;
+}
+let num=parseInt(prompt("Enter the number"));
+isArmstrong(num);
+    </script>
+    
+     
+</body>
+</html>

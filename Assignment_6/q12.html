@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let j=0;
+        let n=parseInt(prompt("Enter number of elements"));
+        let a=[];
+        let c=[];
+        for(let i=0;i<n;i++)
+        {
+            a[i]=parseInt(prompt("Enter value of elements"));
+        }
+        const myfun=()=>{
+            for(let i=0;i<n;i++)
+            {
+             if(!c.includes(a[i]))
+            {
+                c[j]=a[i];
+                j++;
+            }
+            }
+            return c;
+        }
+    let result=myfun();
+    document.getElementById("output").innerHTML=`
+    <strong>Input String:</strong>${a}<br>
+    <strong>Output String:</strong>${result}<br>
+    `;
+    </script>
+</body>
+</html>

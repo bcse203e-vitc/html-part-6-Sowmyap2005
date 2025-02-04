@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        function longest(str) {
+            str = str.match(/[a-zA-Z0-9]+/gi);
+            let largest = "";
+
+            for (let i = 0; i < str.length; i++) {
+                if (str[i].length > largest.length) {
+                    largest = str[i];
+                }
+            }
+            return largest;
+        }
+
+        let a = prompt("Enter the sentence");
+        document.getElementById("output").innerHTML = `Largest word: ${longest(a)}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let j=0;
+        let n=parseInt(prompt("Enter number of elements"));
+        let a=[];
+        let b=[];
+        let c=[];
+        let d=[];
+        for(let i=0;i<n;i++)
+        {
+            a[i]=parseInt(prompt("Enter value of elements"));
+            b[i]=a[i];
+            c[i]=a[i];
+        }
+        document.getElementById("output").innerHTML=`<strong>input:</strong>${a}`;
+        for(let i=0;i<n-1;i++)
+        {
+            for(let j=0;j<n-i-1;j++){
+                if(a[j]>a[j+1]){
+                let temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;}
+            }
+        }
+        for(let i=0;i<n-1;i++)
+        {
+            for(let j=0;j<n-i-1;j++){
+                if(c[j]<c[j+1]){
+                let temp=c[j];
+                c[j]=c[j+1];
+                c[j+1]=temp;}
+            }
+        }
+        document.getElementById("output").innerHTML=`<strong>input:</strong>${b} <br> <strong>output-ascending:</strong>${a} <br> <strong>output-descending:</strong>${c}`;
+    </script>
+</body>
+</html>

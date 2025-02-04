@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="Count"></p>
+    <script>
+        const vowelss = (s) => {
+    const vowels = "aeiouAEIOU";
+    let a=[];
+    let count = 0;
+
+    for (const char of s) {
+        if (vowels.includes(char)) {
+            count++;
+            a.push(char);
+        }
+    }
+
+    return {count,a};
+};
+
+let s=prompt("Enter string");
+let l=s.length;
+let result=vowelss(s);
+
+document.getElementById("Count").innerHTML=`
+    <strong>input:</strong>${s}<br>
+    <strong>vowel count:</strong>${result.count}<br>
+    <strong>vowel:</strong>${result.a}<br>
+    <strong>Consonant count:</strong>${l-result.count}<br>`;
+
+    </script>
+    
+</body>
+</html>

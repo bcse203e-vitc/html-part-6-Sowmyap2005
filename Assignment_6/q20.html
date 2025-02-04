@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Frequency Counter</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        const count = (s) => {
+            const obj = {};
+            for (const char of s) {
+                obj[char] = (obj[char] || 0) + 1;
+            }
+            return obj;
+        };
+
+        const s = prompt("Enter the string");
+
+        let result = count(s);
+        let formattedResult = Object.entries(result)
+            .map(([char, freq]) => `${char}: ${freq}`)
+            .join("<br>");
+
+        document.getElementById("output").innerHTML = `<strong>Character Count:</strong><br>${formattedResult}`;
+    </script>
+</body>
+</html>

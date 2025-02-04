@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let n=parseInt(prompt("Enter 1 for decimal to Binary and 2 for Binary to Decimal"));
+        if(n==1){
+        function decimalToBinary(N) {
+            return (N >>> 0).toString(2);
+        }
+
+        let N = parseInt(prompt("Enter number"));
+        let binary = decimalToBinary(N);
+        document.getElementById("output").innerHTML=`The binary representation of given number is:${ binary}`;
+        }
+        else{
+        function binaryToDecimalParseInt(binary) {
+            return parseInt(binary, 2);
+        }
+
+        const binaryNumber = parseInt(prompt("Enter number"));
+        document.getElementById("output").innerHTML=`result is : ${binaryToDecimalParseInt(binaryNumber)}`;}
+    </script>
+</body>
+</html>

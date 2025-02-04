@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let j=0;
+        let n=parseInt(prompt("Enter number of elements"));
+        let a=[];
+        for(let i=0;i<n;i++)
+        {
+            a[i]=parseInt(prompt("Enter value of elements"));
+        }
+        a.sort();
+        let l=a.length;
+        b=a[l-2];
+        c=a[1];
+        document.getElementById("output").innerHTML=`<strong>Scound Largest:</strong>${b}<br>
+        <strong>Scound Smallest:</strong>${c}<br>`;
+    </script>
+
+</body>
+</html>
