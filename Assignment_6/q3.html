@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=parseInt(prompt("Number of elements in array"));
+        let list=[];
+        let even=[];
+        let odd=[];
+        let e=0,o=0;
+        for(let i=0;i<n;i++)
+        {
+            list[i]=parseInt(prompt("Enter the number"));
+            if(list[i]%2==0)
+            {
+                even[e]=list[i];
+                e++;
+            }
+            else{
+                odd[o]=list[i];
+                o++;
+            }
+         }
+         console.log("even array:",{even});
+         console.log("odd array:",{odd});
+         //documet.write(`even array:${even}`);
+         //documet.write("<br>");
+         //documet.write(`odd array:${odd}`);
+    </script>
+</body>
+</html>

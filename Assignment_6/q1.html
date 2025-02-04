@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt('enter First Number'));//10
+        let b=parseInt(prompt('enter Second Number'));//20
+        document.write(`before swapping: ${a}`);
+        document.write("<br>");
+        document.write(`before swapping: ${b}`);
+        document.write("<br>");
+        console.log("before swapping:",a);
+        console.log("before swapping:",b);
+        a=a+b;//30
+        b=a-b;//10
+        a=a-b;
+        document.write(`after swapping: ${a}`);
+        document.write("<br>");
+        document.write(`after swapping: ${b}`);
+        document.write("<br>");
+        console.log("after swapping:",a);
+        console.log("after swapping:",b);
+    </script>
+</body>
+</html>

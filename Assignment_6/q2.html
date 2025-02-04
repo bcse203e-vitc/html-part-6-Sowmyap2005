@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt("Enter the first number"));
+        let b=parseInt(prompt("Enter the second number"));
+        let c=parseInt(prompt("Enter the third number"));
+        const myfun=()=>
+        {
+            var result=a>b?a:b>c?b:c;
+            console.log("The largest of 2 numbers",result);
+            return result;
+        }
+        document.write((myfun()));
+    </script>
+</body>
+</html>
